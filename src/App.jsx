@@ -5,10 +5,12 @@ import EmployeeDashboard from "./component/Dasboard/EmployeeDashboard";
 import AdminDashboard from "./component/Dasboard/AdminDashboard";
 import { getLocalStorage, setLocalStorage } from "./utils/LocalStorage";
 import { AuthContext } from "./context/AuthProvider";
+
 function App() {
   const [user, setUser] = useState(null);
   const [loggedInUserData, setLoggedInUserData] = useState(null);
   const authData = useContext(AuthContext);
+  setLocalStorage();
   useEffect(() => {
     const loggedInUser = localStorage.getItem("loggedInUser");
     if (loggedInUser) {
@@ -52,9 +54,9 @@ function App() {
     <>
       {!user ? <Login handleLogIn={handleLogIn} /> : ""}
       {user == "admin" ? (
-        <AdminDashboard changeUser = {setUser} data={loggedInUserData} />
+        <AdminDashboard changeUser={setUser} data={loggedInUserData} />
       ) : user == "employee" ? (
-        <EmployeeDashboard changeUser = {setUser} data={loggedInUserData} />
+        <EmployeeDashboard changeUser={setUser} data={loggedInUserData} />
       ) : null}
       {/* <AdminDashboard /> */}
     </>
