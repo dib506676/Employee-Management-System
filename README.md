@@ -32,7 +32,6 @@ A modern employee management web application with task assignment and tracking c
 - **Frontend**:
   - React.js
   - Tailwind CSS
-  - React Router
 - **Data Persistence**:
   - Browser localStorage
 - **Build Tools**:
@@ -44,3 +43,15 @@ A modern employee management web application with task assignment and tracking c
 1. Clone the repository:
    ```bash
    git clone https://github.com/dib506676/Employee-Management-System.git
+
+2. Navigate to the project directory:
+   ```bash
+   cd Employee-Management-System
+
+3. Install dependencies:
+   ```bash
+   npm install
+
+4. Start the development server:
+   ```bash
+   npm run dev
