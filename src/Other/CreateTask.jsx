@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function CreateTask() {
+function CreateTask({setTask}) {
   // Form state
   const [formData, setFormData] = useState({
     task_title: "",
@@ -35,7 +35,7 @@ function CreateTask() {
     };
 
     // Get existing data from localStorage
-    const employeesArray = JSON.parse(localStorage.getItem("employees")) || [];
+    let employeesArray = JSON.parse(localStorage.getItem("employees")) || [];
     console.log(employeesArray);
 
 
@@ -63,7 +63,8 @@ function CreateTask() {
 
     // Save back to localStorage
     localStorage.setItem("employees", JSON.stringify(updatedEmployees));
-    console.log(updatedEmployees);
+     employeesArray = JSON.parse(localStorage.getItem("employees")) || [];
+    console.log(employeesArray);
     // Reset form
     setFormData({
       task_title: "",
@@ -72,6 +73,8 @@ function CreateTask() {
       task_category: "",
       assign_to: "",
     });
+
+    setTask(true)
   };
 
   return (

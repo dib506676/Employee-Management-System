@@ -1,9 +1,12 @@
-import React, { useContext } from 'react'
-import { AuthContext } from '../context/AuthProvider'
+import React, { useContext, useEffect } from 'react'
 
-function AllTask() {
-    const authData = useContext(AuthContext)
-    console.log(authData)
+function AllTask({taskCreate}) {
+    let data = JSON.parse(localStorage.getItem("employees")) || [];
+    useEffect(()=>{
+        data = JSON.parse(localStorage.getItem("employees")) || [];
+    },[taskCreate])
+    console.log(data)
+    
     return (
         <div className='p-3 sm:p-4 lg:p-5 rounded mt-3 sm:mt-4 lg:mt-5 bg-[#1c1c1c] min-h-[200px] sm:min-h-[240px] lg:h-60'>
             <div className='grid grid-cols-5 gap-2 mb-2 bg-red-400 py-2 px-2 sm:px-4 rounded text-center'>
@@ -14,7 +17,7 @@ function AllTask() {
                 <h5 className='text-xs sm:text-sm lg:text-base text-red-600 font-medium'>Failed</h5>
             </div>
             <div className='h-[calc(100%-3rem)] overflow-auto'>
-            {authData.employees.map((elem,idx)=>{
+            {data && data?.map((elem,idx)=>{
                 return <div className='grid grid-cols-5 gap-2 mb-2 border-emerald-500 border-2 py-2 px-2 sm:px-4 rounded text-center' key={idx}>
                 <h2 className='text-xs sm:text-sm lg:text-lg font-medium text-red-600 truncate' title={elem.first_name}>{elem.first_name}</h2>
                 <h3 className='text-xs sm:text-sm lg:text-lg font-medium text-yellow-400'>{elem.task_counts.newTask}</h3>
