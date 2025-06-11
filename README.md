@@ -1,6 +1,5 @@
 # Employee Management System
 
-![Project Screenshot](screenshot.png) <!-- Add a screenshot if available -->
 **Login page** 
 <img width="710" alt="Screenshot 2025-06-11 at 1 55 37 PM" src="https://github.com/user-attachments/assets/6a7a0462-780d-4c1a-83f7-aa71fb44dfa4" />
 
