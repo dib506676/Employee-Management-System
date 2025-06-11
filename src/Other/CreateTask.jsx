@@ -75,74 +75,74 @@ function CreateTask() {
   };
 
   return (
-    <div className="bg-[#1c1c1c] mt-7 rounded p-5">
+    <div className="bg-[#1c1c1c] mt-4 sm:mt-6 lg:mt-7 rounded p-3 sm:p-4 lg:p-5">
       <form
         onSubmit={submitHandler}
-        className="flex flex-wrap items-start w-full justify-between"
+        className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6"
       >
-        <div className="w-1/2">
+        <div className="lg:col-span-1 space-y-3 sm:space-y-4">
           <div>
-            <h3 className="text-sm text-gray-300 mb-0.5">Task title</h3>
+            <h3 className="text-xs sm:text-sm text-gray-300 mb-1 sm:mb-0.5">Task title</h3>
             <input
               name="task_title"
               onChange={handleChange}
               value={formData.task_title}
-              className="text-sm py-1 px-2 w-4/5 rounded outline-none bg-transparent border-[1px] border-gray-400 mb-4"
+              className="text-xs sm:text-sm py-1 sm:py-2 px-2 sm:px-3 w-full rounded outline-none bg-transparent border-[1px] border-gray-400"
               type="text"
               placeholder="Make a UI design"
               required
             />
           </div>
           <div>
-            <h3 className="text-sm text-gray-300 mb-0.5">Date</h3>
+            <h3 className="text-xs sm:text-sm text-gray-300 mb-1 sm:mb-0.5">Date</h3>
             <input
               name="task_date"
               onChange={handleChange}
               value={formData.task_date}
-              className="text-sm py-1 px-2 w-4/5 rounded outline-none bg-transparent border-[1px] border-gray-400 mb-4"
+              className="text-xs sm:text-sm py-1 sm:py-2 px-2 sm:px-3 w-full rounded outline-none bg-transparent border-[1px] border-gray-400"
               type="date"
               required
             />
           </div>
           <div>
-            <h3 className="text-sm text-gray-300 mb-0.5">Assign to</h3>
+            <h3 className="text-xs sm:text-sm text-gray-300 mb-1 sm:mb-0.5">Assign to</h3>
             <input
               name="assign_to"
               onChange={handleChange}
               value={formData.assign_to}
-              className="text-sm py-1 px-2 w-4/5 rounded outline-none bg-transparent border-[1px] border-gray-400 mb-4"
+              className="text-xs sm:text-sm py-1 sm:py-2 px-2 sm:px-3 w-full rounded outline-none bg-transparent border-[1px] border-gray-400"
               type="text"
               placeholder="Employee name"
               required
             />
           </div>
           <div>
-            <h3 className="text-sm text-gray-300 mb-0.5">Category</h3>
+            <h3 className="text-xs sm:text-sm text-gray-300 mb-1 sm:mb-0.5">Category</h3>
             <input
               name="task_category"
               onChange={handleChange}
               value={formData.task_category}
-              className="text-sm py-1 px-2 w-4/5 rounded outline-none bg-transparent border-[1px] border-gray-400 mb-4"
+              className="text-xs sm:text-sm py-1 sm:py-2 px-2 sm:px-3 w-full rounded outline-none bg-transparent border-[1px] border-gray-400"
               type="text"
               placeholder="Design, Dev, etc."
               required
             />
           </div>
         </div>
-        <div className="w-2/5 flex flex-col items-start">
-          <h3 className="text-sm text-gray-300 mb-0.5">Description</h3>
+        <div className="lg:col-span-2 flex flex-col">
+          <h3 className="text-xs sm:text-sm text-gray-300 mb-1 sm:mb-0.5">Description</h3>
           <textarea
             name="task_description"
             onChange={handleChange}
             value={formData.task_description}
-            className="w-full h-44 text-sm py-2 px-4 rounded outline-none bg-transparent border-[1px] border-gray-400"
+            className="w-full h-32 sm:h-40 lg:h-44 text-xs sm:text-sm py-2 px-3 sm:px-4 rounded outline-none bg-transparent border-[1px] border-gray-400 resize-none"
             cols={30}
             rows={10}
             required
           />
           <button
             type="submit"
-            className="bg-emerald-500 hover:bg-emerald-600 py-3 px-5 rounded-lg text-sm mt-4 w-full"
+            className="bg-emerald-500 hover:bg-emerald-600 py-2 sm:py-3 px-4 sm:px-5 rounded-lg text-xs sm:text-sm mt-3 sm:mt-4 w-full transition-colors duration-200"
           >
             Create Task
           </button>
