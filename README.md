@@ -1,12 +1,12 @@
 # Employee Management System
 
-**Login page** 
+## Login page
 <img width="710" alt="Screenshot 2025-06-11 at 1 55 37 PM" src="https://github.com/user-attachments/assets/6a7a0462-780d-4c1a-83f7-aa71fb44dfa4" />
 
-**Employee DashBoard**
+## Employee DashBoard
 <img width="1401" alt="Screenshot 2025-06-11 at 1 55 50 PM" src="https://github.com/user-attachments/assets/a7a5f6ef-4896-45c0-bd42-7a0433d3d98f" />
 
-**Admin DashBoard**
+## Admin DashBoard
 <img width="1404" alt="Screenshot 2025-06-11 at 1 56 14 PM" src="https://github.com/user-attachments/assets/7d4ac9e1-66ef-46fa-a891-160855bef0ba" />
 
 
